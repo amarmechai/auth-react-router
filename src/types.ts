@@ -30,6 +30,8 @@ export interface IRoute {
    * defaults to `false`
    */
   allRolesRequired?: boolean;
+
+  modal?: boolean;
 }
 
 export interface IRoutesConfig {
