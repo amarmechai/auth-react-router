@@ -1,6 +1,6 @@
 import React, { ReactElement, useContext } from 'react';
 import { RouterContext } from './context/context';
-import { Outlet, Route, Routes as ReactRouterDomRoutes, useLocation } from 'react-router-dom';
+import { Route, Routes as ReactRouterDomRoutes, useLocation } from 'react-router-dom';
 import { Common, Private, Public } from './route';
 import { IRoute } from './types';
 
@@ -93,10 +93,6 @@ export const Routes = () => {
       {isAuth !== undefined &&
         routes.private &&
         createNestedRoutes(routes.private, Private, background)}
-
-      {background &&
-        <Outlet />
-      }
     </ReactRouterDomRoutes>
   );
 };
