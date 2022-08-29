@@ -94,7 +94,9 @@ export const Routes = () => {
         routes.private &&
         createNestedRoutes(routes.private, Private, background)}
 
-      <Outlet />
+      {background &&
+        <Outlet />
+      }
     </ReactRouterDomRoutes>
   );
 };
